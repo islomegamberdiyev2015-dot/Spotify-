@@ -1,2 +1,5 @@
+
 aiogram
 spotdl
+yt-dlp
+ffmpeg-python
