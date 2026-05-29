@@ -7,7 +7,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 from aiogram.types import FSInputFile
 
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = os.getenv("8919873549:AAGpgKzvbp45KHGpOwmC9EIgvyUAOMTmhNA")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
