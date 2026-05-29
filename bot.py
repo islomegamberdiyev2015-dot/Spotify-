@@ -7,7 +7,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 from aiogram.types import FSInputFile
 
-TOKEN = "8919873549:AAGpgKzvbp45KHGpOwmC9EIgvyUAOMTmhNA"
+TOKEN = "sizning_tokeningiz"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -29,7 +29,14 @@ async def download_song(message: types.Message):
     loop = asyncio.get_event_loop()
     await loop.run_in_executor(
         None,
-        lambda: subprocess.run(["spotdl", url, "--output", "."], capture_output=True)
+        lambda: subprocess.run([
+            "yt-dlp",
+            "-x",
+            "--audio-format", "mp3",
+            "--no-playlist",
+            "-o", "%(id)s.%(ext)s",
+            f"ytsearch1:{url}"
+        ], capture_output=True)
     )
 
     files = glob.glob("*.mp3")
