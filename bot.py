@@ -53,3 +53,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    sed -i 's/8919873549:AAGpgKzvbp45KHGpOwmC9EIgvyUAOMTmhNA/8919873549:AAGOhfdErm9K_rZx9_EnW7T9iP_aZexS2tU/' bot.py
+    
